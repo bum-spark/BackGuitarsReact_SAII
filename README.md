@@ -107,6 +107,10 @@ Base URL: `http://localhost:4000/Api`
 | `PATCH` | `/Api/:id` | Alternar disponibilidad (soft delete de disponibilidad) | — |
 | `DELETE` | `/Api/:id` | Soft delete (marca `deleted=true`, no borra de la BD) | — |
 
+> **Documentación detallada de endpoints** (métodos HTTP, body exacto, respuestas exitosas y de error en formato APA 7):  
+> [Ver documento completo en Google Docs](https://docs.google.com/document/d/1oBmjnFXv3jjXVj0aerIeONTpWecFfZQ_ukb74NW5VfM/edit?usp=sharing)
+
+
 ### Estructura de respuesta
 
 Todas las respuestas exitosas siguen el formato:
