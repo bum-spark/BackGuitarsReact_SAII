@@ -1,11 +1,13 @@
 import express from 'express'
+import cors from 'cors'
 import router from './router'
 import db from './config/db'
 
 async function connectDB() {
     try {
-        await db.authenticate
-        db.sync()
+        await db.authenticate()
+        // alter: true agrega columnas nuevas sin recrear la tabla
+        db.sync({ alter: true })
         console.log("Conexion Exitosa");
     } catch (error) {
         console.log(error);
@@ -15,6 +17,10 @@ async function connectDB() {
 connectDB()
 
 const server = express()
+
+server.use(cors({
+    origin: 'http://localhost:5173'
+}))
 
 server.use(express.json())
 
