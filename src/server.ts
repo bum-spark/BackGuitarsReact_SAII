@@ -6,7 +6,6 @@ import db from './config/db'
 async function connectDB() {
     try {
         await db.authenticate()
-        // alter: true agrega columnas nuevas sin recrear la tabla
         db.sync({ alter: true })
         console.log("Conexion Exitosa");
     } catch (error) {
